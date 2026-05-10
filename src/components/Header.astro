@@ -1,0 +1,24 @@
+---
+const nav = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Work', href: '/work' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+<header class="border-b border-gray-100">
+  <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="/" class="font-medium text-gray-900 hover:text-gray-500 transition-colors">
+      Yuki Igarashi
+    </a>
+    <ul class="flex gap-6">
+      {nav.map(({ label, href }) => (
+        <li>
+          <a href={href} class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
